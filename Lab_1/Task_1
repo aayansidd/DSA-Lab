@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int numbers [5] = {2, 4, 6, 8, 10};
+  int total = 0;
+  numbers[2] = 7;
+  for (int x = 0; x < 5; x++){
+     cout << numbers[x] << endl;
+     total = total + numbers[x];
+     //output will be 2,4,7,8,10
+     
+  }
+  cout << total; //total will be 31
+}
