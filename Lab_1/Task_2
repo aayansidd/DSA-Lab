@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int numbers [5];
+  int total = 0;
+  cout << "Enter 5 numbers into the array";
+  for (int x = 0; x < 5; x++){
+     cin >> numbers[x]; 
+  }
+  for (int x = 0; x < 5; x++){
+  	  total = total + numbers[x];
+      cout << total;
+  }
+}
