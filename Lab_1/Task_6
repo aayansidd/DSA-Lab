@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int numbers [10];
+  int total = 10;
+  bool flag = false;
+  cout << "Enter 10 numbers into the array";
+  for (int x = 0; x < 10; x++){
+     cin >> numbers[x]; 
+  }
+    for (int x = 0; x < total; x++) {
+
+        for (int y = x + 1; y < total; y++) {
+
+            if (numbers[x] == numbers[y]) {
+
+               
+                for (int i = y; i < total - 1; i++) {
+                    numbers[i] = numbers[i + 1];
+                }
+
+                
+                total--;
+
+               
+                y--;
+            }
+        }
+    }
+  for (int x = 0; x < total; x++) {
+        cout << numbers[x] << " ";
+    }
+
+    return 0;
+}
