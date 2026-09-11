@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int numbers [8];
+  int total = 0;
+  int max = 0;
+  int min = 1000000000;
+  cout << "Enter 8 numbers into the array";
+  for (int x = 0; x < 8; x++){
+     cin >> numbers[x]; 
+  }
+  for (int x = 0; x < 5; x++){
+      if(max < numbers[x]){
+        max = numbers[x];
+      }
+      if(min > numbers[x]){
+        min = numbers[x];
+      }
+      for(int y = 0; y < 8; y++){
+        if((numbers[x] == numbers[y]) && (x != y)){
+            cout << "Value occurs twice at index" << x;
+        }
+      }
+  }
+}
